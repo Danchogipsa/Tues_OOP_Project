@@ -33,6 +33,25 @@ void User::searchWorkout(string workoutName) {
     }
 }
 
+void User::deleteWorkout(string workoutName) {
+
+    bool found=false;
+    for (int i= 0; i < workouts.size(); i++) {
+            if (workouts[i].getName() ==workoutName) {
+                workouts.erase(workouts.begin()+ i);
+
+                cout << "Workout deleted!" << endl;
+
+
+                found = true;
+             break;
+            }
+    }
+    if (!found) {
+        cout << "Workout not found!" << endl;
+    }
+}
+
 void User::showPersonalRecords() {
     cout << "\n=== Personal records by you =====" << endl;
     for (int i = 0; i < workouts.size(); i++) {

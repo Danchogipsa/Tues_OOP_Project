@@ -18,7 +18,8 @@ int  main(){
         cout << "2. Show All Workouts/ " <<endl;
         cout << "3.Search/" <<endl;
         cout << "4. Show Personal Records(pr)/"<<endl;
-        cout << "5.Exit/" <<endl;
+        cout << "5. Delete workout/" <<endl;
+        cout << "6.Exit/" <<endl;
         cout << "/n Enter/:";
         cin >> choice;
         cin.ignore();
@@ -102,8 +103,17 @@ int  main(){
             user.showPersonalRecords();
         }
 
-        else if (choice==5) {
+        else if (choice == 5) {
 
+        string workoutName;
+
+        cout << "Enter workout name: ";
+        cin >> workoutName;
+
+        user.deleteWorkout(workoutName);
+        
+        }
+        else if (choice==6) {
             cout << "Exiting." << endl;
             break;
         }
