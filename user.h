@@ -21,6 +21,7 @@ public:
      int getWorkoutCount(); 
      void showProgress();
      void weeklySummary();
+     void checkReminder();
 };
 
 #endif
