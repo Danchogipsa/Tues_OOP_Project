@@ -59,6 +59,7 @@ int  main(){
         cout << "5. Delete workout/" <<endl;
         cout << "6.Exit/" <<endl;
         cout << "7. Show Progress/" << endl;
+        cout << "8. Weekly Summary/"<< endl;
         cout << "/n Enter/:";
         cin >> choice;
         cin.ignore();
@@ -166,9 +167,13 @@ int  main(){
         else if (choice == 7) {
             user.showProgress();
         }
+        else if (choice == 8) {
+        user.weeklySummary();
+        }
         else {
             cout << "Invalid choice!" << endl;
         }
+       
     }
 
     return 0;
