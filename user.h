@@ -20,6 +20,7 @@ public:
     void deleteWorkout(string workoutName);
      int getWorkoutCount(); 
      void showProgress();
+     void weeklySummary();
 };
 
 #endif
