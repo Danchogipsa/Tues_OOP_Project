@@ -37,7 +37,14 @@ int  main(){
             cin >> workoutDate;
 
             Workout workout(workoutName, workoutDate);
+                string note;
 
+            cout << "Enter note: ";
+                
+                cin.ignore();
+                getline(cin, note);
+            
+                workout.setNote(note);
 
 
 
@@ -111,7 +118,7 @@ int  main(){
         cin >> workoutName;
 
         user.deleteWorkout(workoutName);
-        
+
         }
         else if (choice==6) {
             cout << "Exiting." << endl;

@@ -11,13 +11,13 @@ class Workout {
 private:
     string name;
     string date;
+    string note;
     vector<Exercise> exercises;
 
 public:
     Workout(string name, string date);
     string getName();
-
-
+     void setNote(string note);
     void addExercise(Exercise exercise);
     vector<Exercise>& getExercises();
     void showWorkout();
