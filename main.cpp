@@ -87,7 +87,13 @@ int  main(){
                 user.addWorkout(workout);
 
             cout << "\nWorkout added succesfuly" << endl;
+//smqta vsichki workoutove napraveni ot user
+            cout << "Total workouts: "
+            << user.getWorkoutCount()
+            << endl;
         }
+
+        
 
      else if (choice==2) {
          user.showAllWorkouts();

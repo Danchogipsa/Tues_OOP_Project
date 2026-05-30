@@ -66,3 +66,5 @@ void User::showPersonalRecords() {
         }
     }
 }
+
+int User::getWorkoutCount(){return workouts.size();}
