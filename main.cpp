@@ -8,6 +8,44 @@
 #include "set.cpp"
 using namespace std;
 
+//fail safe
+int safeInputInt(string message) {
+    int x;
+    while (true) {
+        cout << message;
+        cin >> x;
+            if (cin.fail()) {
+                cin.clear();
+                
+                cin.ignore(6700, '\n');
+                
+                cout << "Invalid input! Try again.\n";
+        } else {
+                cin.ignore(6700, '\n');
+            return x;
+        }
+    }
+}
+
+int safeInputDouble(string message) {
+    double x;
+    while (true) {
+        cout << message;
+        cin >> x;
+            if (cin.fail()) {
+                cin.clear();
+                
+                cin.ignore(6700, '\n');
+                
+                cout << "Invalid input! Try again.\n";
+        } else {
+                cin.ignore(6700, '\n');
+            return x;
+        }
+    }
+}
+
+
 int  main(){
     User user("John");
     int choice;
@@ -48,17 +86,15 @@ int  main(){
 
 
 
-                int exerciseCount;
-
-                cout << "How many exercises-: ";
-                cin >> exerciseCount;
+                int exerciseCount = safeInputInt("How many exercises-: ");// fail safe change
 
             for (int i=0;i<exerciseCount;i++) {
 
                 string exerciseName;
 
                 cout <<"\nExercise name- : ";
-                cin >>exerciseName;
+                cin.ignore();
+                getline(cin, exerciseName);
 
                     Exercise exercise(exerciseName);
 
@@ -70,13 +106,9 @@ int  main(){
 
                 for (int j=0;j<setCount; j++) {
 
-                    int reps;
-                    double weight;
-                    cout<< "Reps: ";
-                    cin >> reps;
-
-                    cout << "Weight: ";
-                    cin >> weight;
+                    int reps =safeInputInt("Reps: ");              //
+                    double weight = safeInputDouble("Weight: ");   //      FAIL SAFE CHANGE 
+                                                                   //
 
                         exercise.addSet(reps, weight);
                 }
