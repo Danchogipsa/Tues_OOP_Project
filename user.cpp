@@ -67,4 +67,21 @@ void User::showPersonalRecords() {
     }
 }
 
+void User::showProgress() {
+    cout << "\n=== PERSONAL PROGRESS ======" << endl;
+    for (int i=0; i< workouts.size();i++) {
+        vector<Exercise>& exercises = workouts[i].getExercises();
+    for (int j = 0; j < exercises.size(); j++) {
+
+    
+        cout << exercises[j].getName()
+    
+        << " -> Best: "
+        
+        << exercises[j].getBestWeight()
+        << " kg" << endl;
+        }
+    }
+}
+
 int User::getWorkoutCount(){return workouts.size();}

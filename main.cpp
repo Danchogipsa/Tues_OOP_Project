@@ -58,6 +58,7 @@ int  main(){
         cout << "4. Show Personal Records(pr)/"<<endl;
         cout << "5. Delete workout/" <<endl;
         cout << "6.Exit/" <<endl;
+        cout << "7. Show Progress/" << endl;
         cout << "/n Enter/:";
         cin >> choice;
         cin.ignore();
@@ -119,7 +120,7 @@ int  main(){
                 user.addWorkout(workout);
 
             cout << "\nWorkout added succesfuly" << endl;
-//smqta vsichki workoutove napraveni ot user
+        //smqta vsichki workoutove napraveni ot user
             cout << "Total workouts: "
             << user.getWorkoutCount()
             << endl;
@@ -127,9 +128,9 @@ int  main(){
 
         
 
-     else if (choice==2) {
+        else if (choice==2) {
          user.showAllWorkouts();
-    }
+        }
 
         else if (choice==3) {
 
@@ -162,7 +163,9 @@ int  main(){
             cout << "Exiting." << endl;
             break;
         }
-
+        else if (choice == 7) {
+            user.showProgress();
+        }
         else {
             cout << "Invalid choice!" << endl;
         }

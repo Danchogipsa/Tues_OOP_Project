@@ -19,6 +19,7 @@ public:
     void showPersonalRecords();
     void deleteWorkout(string workoutName);
      int getWorkoutCount(); 
+     void showProgress();
 };
 
 #endif
