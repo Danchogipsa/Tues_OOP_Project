@@ -77,11 +77,26 @@ void User::showProgress() {
         cout << exercises[j].getName()
     
         << " -> Best: "
-        
+
         << exercises[j].getBestWeight()
         << " kg" << endl;
         }
     }
+}
+
+void User::weeklySummary() {
+
+    cout << "\n=== WEEKLY SUMMARY =====" << endl;
+
+    cout<< "Total workouts: "<< workouts.size()<< endl;
+
+    int totalExercises = 0;
+
+    for (int i =0; i<workouts.size();i++) {
+        totalExercises += workouts[i].getExercises().size();
+    }
+
+    cout << "Total exercises: "<< totalExercises << endl;
 }
 
 int User::getWorkoutCount(){return workouts.size();}
