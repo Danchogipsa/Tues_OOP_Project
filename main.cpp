@@ -60,6 +60,7 @@ int  main(){
         cout << "6.Exit/" <<endl;
         cout << "7. Show Progress/" << endl;
         cout << "8. Weekly Summary/"<< endl;
+        cout << "9. Reminder/" << endl;
         cout << "/n Enter/:";
         cin >> choice;
         cin.ignore();
@@ -169,6 +170,9 @@ int  main(){
         }
         else if (choice == 8) {
         user.weeklySummary();
+        }
+        else if (choice == 9) {
+        user.checkReminder();
         }
         else {
             cout << "Invalid choice!" << endl;
