@@ -99,4 +99,17 @@ void User::weeklySummary() {
     cout << "Total exercises: "<< totalExercises << endl;
 }
 
+void User::checkReminder() {
+
+    cout << "\n===== REMINDER =======" << endl;
+
+    if (workouts.empty()) {
+        cout << "You have no workouts this week! What are you doing??" << endl;
+    } else {
+        cout << "Good job! Keep going legend. " 
+             << workouts.size() 
+             << " times." << endl;
+    }
+}
+
 int User::getWorkoutCount(){return workouts.size();}
