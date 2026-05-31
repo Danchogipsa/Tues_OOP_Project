@@ -8,7 +8,7 @@
 #include "set.cpp"
 using namespace std;
 
-//fail safe
+
 int safeInputInt(string message) {
     int x;
     while (true) {
@@ -89,7 +89,7 @@ int  main(){
 
 
 
-                int exerciseCount = safeInputInt("How many exercises-: ");// fail safe change
+                int exerciseCount = safeInputInt("How many exercises-: ");
 
             for (int i=0;i<exerciseCount;i++) {
 
@@ -109,9 +109,8 @@ int  main(){
 
                 for (int j=0;j<setCount; j++) {
 
-                    int reps =safeInputInt("Reps: ");              //
-                    double weight = safeInputDouble("Weight: ");   //      FAIL SAFE CHANGE 
-                                                                   //
+                    int reps =safeInputInt("Reps: ");              
+                        double weight = safeInputDouble("Weight: ");   
 
                         exercise.addSet(reps, weight);
                 }
@@ -119,10 +118,10 @@ int  main(){
                     workout.addExercise(exercise);
             }
 
-                user.addWorkout(workout);
+            user.addWorkout(workout);
 
             cout << "\nWorkout added succesfuly" << endl;
-        //smqta vsichki workoutove napraveni ot user
+            
             cout << "Total workouts: "
             << user.getWorkoutCount()
             << endl;
@@ -135,15 +134,9 @@ int  main(){
         }
 
         else if (choice==3) {
-
-                 //
-
             string workoutName;
-
-
             cout << "Enter workout name:";
             cin >> workoutName;
-
             user.searchWorkout(workoutName);
         }
 
